@@ -13,11 +13,11 @@ class Vehicle {
 
     start() {
         if (this.fuel > 0) {
-            return this.started = true;
             console.log("engine started...!!!");
+            return this.started = true;
         } else {
-            return this.started = false;
             console.log("engine cannot start...");
+            return this.started = false;
         }
     }
     accelerate() {
@@ -40,7 +40,7 @@ class Vehicle {
                     console.log(this.speed -= 1);
                     this.fuel = this.fuel - 1;
                 } else {
-                    console.log(this + " has stopped moving");
+                    console.log(this.make + " has stopped moving");
                     this.fuel = this.fuel - 1;
                 }
             } else {
@@ -62,21 +62,11 @@ class Vehicle {
         decelerate();
     }
 
-    autoPark()
-    {
-
-    }
-
-    autoDrive()
-    {
-      
-    }
-
     typeOfVehicle(wheels) {
         if (this.numberOfWheels == 8 && 8 == wheels) {
             console.log(this.model + " " + this.make + " is a Truck");
         } else if (this.numberOfWheels == 4 && 4 == wheels) {
-            console.log(this.model + " " + this.make + " is a CAr");
+            console.log(this.model + " " + this.make + " is a Car");
         } else if (this.numberOfWheels == 2 && 2 == wheels) {
             console.log(this.model + " " + this.make + " is a Bike");
         } else {
